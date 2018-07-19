@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-jsx-classname-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "It allows you to specify inner components via class names",
   "main": "dist/index.js",
   "author": "Eugene Zhlobo <ezhlobo@gmail.com>",
