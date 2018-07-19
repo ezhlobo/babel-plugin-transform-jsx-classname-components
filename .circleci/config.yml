@@ -8,7 +8,7 @@ defaults: &defaults
     - image: circleci/node:8
 
 jobs:
-  test:
+  build:
     <<: *defaults
     steps:
       - checkout
