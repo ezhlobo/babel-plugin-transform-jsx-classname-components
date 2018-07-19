@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ezhlobo/babel-plugin-transform-jsx-classname-components.git"
+    "url": "https://github.com/ezhlobo/babel-plugin-transform-jsx-classname-components"
   },
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.0.0-beta.54"
