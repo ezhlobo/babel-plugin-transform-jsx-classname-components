@@ -1,0 +1,35 @@
+{
+  "name": "babel-plugin-transform-jsx-classname-components",
+  "version": "0.0.1",
+  "description": "It allows you to specify inner components via class names",
+  "main": "dist/index.js",
+  "author": "Eugene Zhlobo <ezhlobo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src",
+    "test": "jest",
+    "build": "babel src --out-dir dist --ignore src/__tests__",
+    "prepublish": "yarn build"
+  },
+  "files": [
+    "README.md",
+    "dist/"
+  ],
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.0.0-beta.54"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "babel-eslint": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
+    "common-prefix": "^1.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-datarockets-base": "^0.0.4-6",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.1"
+  },
+  "eslintConfig": {
+    "extends": "datarockets-base"
+  }
+}

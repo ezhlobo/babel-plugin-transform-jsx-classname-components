@@ -1,0 +1,43 @@
+version: 2
+
+defaults: &defaults
+  environment:
+    NODE_ENV: development
+  working_directory: ~/github
+  docker:
+    - image: circleci/node:8
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Install greenkeeper-lockfile globally
+          command: yarn global add greenkeeper-lockfile
+
+      - run:
+          name: Install dependencies
+          command: yarn install
+
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Greenkeeper lockfile update
+          command: ~/.yarn/bin/greenkeeper-lockfile-update
+
+      - run: yarn lint
+      - run: yarn test --runInBand
+
+      - run:
+          name: Greenkeeper lockfile upload
+          command: ~/.yarn/bin/greenkeeper-lockfile-upload

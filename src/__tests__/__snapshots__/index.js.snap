@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does not do anything with the simple code 1`] = `"<div><Component className=\\"hello\\" /></div>;"`;
+
+exports[`transforms component if capitalized class name goes first 1`] = `
+"<React.Fragment>
+  <Component.Inner data-text=\\"extra\\" className=\\"extra\\" />
+  <Component data-text=\\"extra\\" className=\\"extra Inner\\" />
+</React.Fragment>;"
+`;
+
+exports[`transforms computed attributes 1`] = `
+"<React.Fragment>
+  <Component.Inner className={['simple'].join(' ')} />
+  <Component.Inner className={[true && 'simple'].join(' ')} />
+</React.Fragment>;"
+`;
+
+exports[`transforms with closing names 1`] = `
+"<React.Fragment>
+  <One>Hello</One>
+  <Two.Inner>Hello</Two.Inner>
+  <Three>Hello</Three>
+  <Four.Inner><FourNested>Hello</FourNested></Four.Inner>
+  <Five><FiveNested.Inner>Hello</FiveNested.Inner></Five>
+  <Six.Inner><SixNested.Inner>Hello</SixNested.Inner></Six.Inner>
+</React.Fragment>;"
+`;
+
+exports[`transforms with unusual names 1`] = `
+"<React.Fragment>
+  <A.B />
+  <A0.B0 />
+  <CamelCase.CamelCase />
+  <CamelCase0.CamelCase0 />
+  <CamelCase.$CamelCase />
+  <Camel_Case._Snake_Case />
+</React.Fragment>;"
+`;
+
+exports[`with option "objects" leaves previous class names but removes used one 1`] = `
+"<React.Fragment>
+  <Component className=\\"Inner second\\" />
+  <Icons.Inner className=\\"second\\" />
+  <Navigation.Inner className=\\"second\\" />
+</React.Fragment>;"
+`;
+
+exports[`with option "objects" transforms only specified objects 1`] = `
+"<React.Fragment>
+  <Component className=\\"Inner\\" />
+  <Icons.Inner />
+  <Navigation.Inner />
+</React.Fragment>;"
+`;
