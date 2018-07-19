@@ -1,6 +1,6 @@
-const babel = require('@babel/core')
+const babel = require('babel-core')
 const common = require('common-prefix')
-const plugin = require('..')
+const plugin = require('..').default
 
 const sanitizeSource = (src) => {
   const lines = src.trimRight().split('\n')
@@ -16,11 +16,13 @@ const sanitizeSource = (src) => {
 
 const transform = (src = '', options = {}) => babel
   .transform(sanitizeSource(src), {
+    ast: false,
     plugins: [
       [plugin, options],
     ],
   })
   .code
+  .trim()
 
 it('exists', () => {
   expect(plugin).toBeTruthy()

@@ -1,4 +1,4 @@
-import jsxSyntax from '@babel/plugin-syntax-jsx'
+import jsxSyntax from 'babel-plugin-syntax-jsx'
 
 const isClassNameAttr = attribute =>
   attribute.name.name === 'className'

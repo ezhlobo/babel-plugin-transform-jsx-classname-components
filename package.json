@@ -20,11 +20,11 @@
     "url": "https://github.com/ezhlobo/babel-plugin-transform-jsx-classname-components"
   },
   "dependencies": {
-    "@babel/plugin-syntax-jsx": "^7.0.0-beta.54"
+    "babel-plugin-syntax-jsx": "^6.18.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.54",
-    "@babel/core": "^7.0.0-beta.54",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.7.0",
     "common-prefix": "^1.1.0",
