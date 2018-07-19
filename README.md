@@ -58,13 +58,13 @@ In `.babelrc`:
 
 ## Options
 
-Name | Type | Default | Description
-- | -
-[`objects`](#objects) | `Array<string>` | null | It specifies what objects should be processed
+| Name | Type | Default | Description
+| - | - | - | -
+| [`objects`](#objects) | `Array<string>` | null | It specifies what objects should be processed
 
 ### `objects`
 
-If you set it to `[Icons]` it will handle only `<Icons ... />`:
+If you set it to `['Icons']` it will handle only `<Icons ... />`:
 
 ```jsx
 <Component className="Inner" />
