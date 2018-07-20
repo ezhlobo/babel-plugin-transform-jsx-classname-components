@@ -2,7 +2,7 @@
 
 :sunglasses: *Long name, right...*
 
-[![npm version](https://img.shields.io/npm/v/babel-plugin-transform-jsx-classname-components.svg?longCache)](https://www.npmjs.com/package/babel-plugin-transform-jsx-classname-components) [![CI Status](https://img.shields.io/circleci/project/github/ezhlobo/babel-plugin-transform-jsx-classname-components/master.svg?longCache)](https://circleci.com/gh/ezhlobo/babel-plugin-transform-jsx-classname-components/tree/master)
+[![npm version](https://img.shields.io/npm/v/babel-plugin-transform-jsx-classname-components.svg?longCache)](https://www.npmjs.com/package/babel-plugin-transform-jsx-classname-components) [![CI Status](https://img.shields.io/circleci/project/github/ezhlobo/babel-plugin-transform-jsx-classname-components/master.svg?longCache)](https://circleci.com/gh/ezhlobo/babel-plugin-transform-jsx-classname-components/tree/master) [![Greenkeeper badge](https://badges.greenkeeper.io/ezhlobo/babel-plugin-transform-jsx-classname-components.svg)](https://greenkeeper.io/)
 
 ## What
 
