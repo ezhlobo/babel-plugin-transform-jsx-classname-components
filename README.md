@@ -61,6 +61,7 @@ In `.babelrc`:
 | Name | Type | Default | Description
 | - | - | - | -
 | [`objects`](#objects) | `Array<string>` | null | It specifies what objects should be processed
+| [`attribute`](#attribute) | `String` | `className` | It specifies attribute name which should be processed
 
 ### `objects`
 
@@ -76,4 +77,20 @@ Will be transformed into:
 ```jsx
 <Component className="Inner" />
 <Icons.Inner  />
+```
+
+### `attribute`
+
+If you set it to `styleName` it will process `styleName` attribute instead of default one:
+
+```jsx
+<Component styleName="Inner" />
+<Icons className="JustClass" styleName="Inner" />
+```
+
+Will be transformed into:
+
+```jsx
+<Component.Inner />
+<Icons.Inner className="JustClass"  />
 ```

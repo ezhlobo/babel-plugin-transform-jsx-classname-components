@@ -38,6 +38,14 @@ exports[`transforms with unusual names 1`] = `
 </React.Fragment>;"
 `;
 
+exports[`with option "attribute" transforms only specified attributes 1`] = `
+"<React.Fragment>
+  <A.Inner className=\\"Inner\\" />
+  <B.Inner />
+  <C className=\\"Inner\\" />
+</React.Fragment>;"
+`;
+
 exports[`with option "objects" leaves previous class names but removes used one 1`] = `
 "<React.Fragment>
   <Component className=\\"Inner second\\" />

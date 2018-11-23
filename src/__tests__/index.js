@@ -115,3 +115,21 @@ describe('with option "objects"', () => {
     expect(transformWithObjects(source)).toMatchSnapshot()
   })
 })
+
+describe('with option "attribute"', () => {
+  const transformWithAttribute = source => transform(source, {
+    attribute: 'styleName',
+  })
+
+  it('transforms only specified attributes', () => {
+    const source = `
+      <React.Fragment>
+        <A className="Inner" styleName="Inner" />
+        <B styleName="Inner" />
+        <C className="Inner" />
+      </React.Fragment>
+    `
+
+    expect(transformWithAttribute(source)).toMatchSnapshot()
+  })
+})

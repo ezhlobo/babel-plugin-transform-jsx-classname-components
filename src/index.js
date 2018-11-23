@@ -1,7 +1,7 @@
 import jsxSyntax from 'babel-plugin-syntax-jsx'
 
-const isClassNameAttr = attribute =>
-  attribute.name.name === 'className'
+const isTargetAttr = (attribute, targetName = 'className') =>
+  attribute.name.name === targetName
 
 const factoryShouldBeProcessed = objects => (componentName) => {
   if (Array.isArray(objects)) {
@@ -30,7 +30,7 @@ export default ({ types: t }) => ({
 
         JSXOpeningElement.traverse({
           JSXAttribute(JSXAttribute) {
-            if (isClassNameAttr(JSXAttribute.node)) {
+            if (isTargetAttr(JSXAttribute.node, opts.attribute)) {
               if (t.isStringLiteral(JSXAttribute.node.value)) {
                 const classNameValue = JSXAttribute.node.value.value.split(' ')
 
