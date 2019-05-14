@@ -29,7 +29,13 @@ it('exists', () => {
 })
 
 it('does not do anything with the simple code', () => {
-  const source = '<div><Component className="hello" /></div>'
+  const source = `
+    <div>
+      <Component className="hello" />
+      <Component.Inner className="hello" />
+      <Component.Inner className="CamelCasedClassName" />
+    </div>
+  `
 
   expect(transform(source)).toMatchSnapshot()
 })

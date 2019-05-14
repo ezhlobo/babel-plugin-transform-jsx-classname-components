@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`does not do anything with the simple code 1`] = `"<div><Component className=\\"hello\\" /></div>;"`;
+exports[`does not do anything with the simple code 1`] = `
+"<div>
+  <Component className=\\"hello\\" />
+  <Component.Inner className=\\"hello\\" />
+  <Component.Inner className=\\"CamelCasedClassName\\" />
+</div>;"
+`;
 
 exports[`transforms component if capitalized class name goes first 1`] = `
 "<React.Fragment>
